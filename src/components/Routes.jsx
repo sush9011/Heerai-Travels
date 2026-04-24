@@ -6,21 +6,21 @@ export default function Routes() {
       from: "Pune", 
       to: "Mumbai", 
       price: "₹2,999", 
-      img: "/src/assets/Mumbai.jpg",
+      img: "/images/mumbai.jpg",
       duration: "Express Route"
     },
     { 
       from: "Pune", 
       to: "Nashik", 
       price: "₹2,199", 
-      img: "/src/assets/Nashik.jpg",
+      img: "/images/nashik.jpg",
       duration: "Scenic Drive" 
     },
     { 
       from: "Pune", 
       to: "Karnataka", 
       price: "₹3,199", 
-      img: "/src/assets/Karnataka.jpg",
+      img: "/images/karnataka.jpg",
       duration: "Highway Travel"
     },
   ];

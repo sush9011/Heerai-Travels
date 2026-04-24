@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center px-6 md:px-8 py-4 shadow-md sticky top-0 bg-white z-[99]">
       {/* Logo */}
-      <img src='src\assets\Logo.png' alt="Logo" className="h-8 md:h-10" />
+      <img src='/images/logo.png' alt="Logo" className="h-8 md:h-10" />
 
       {/* Desktop Links */}
       <ul className="hidden md:flex gap-6 text-gray-700 font-medium">

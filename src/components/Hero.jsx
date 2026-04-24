@@ -6,7 +6,7 @@ export default function Hero() {
     <section
       className="relative min-h-[90vh] bg-cover bg-center flex items-center px-4 sm:px-6 md:px-10"
       style={{
-        backgroundImage: "url('/src/assets/Hero.png')"
+        backgroundImage: "url('/images/hero.png')"
       }}
     >
       {/* 🔥 Dark Overlay (only small screens, for text legibility) */}

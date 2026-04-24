@@ -15,7 +15,7 @@ const Login = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center px-4"
-      style={{ backgroundImage: "url('/src/assets/Hero.png')" }}
+      style={{ backgroundImage: "url('/images/hero.png')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
