@@ -2,7 +2,7 @@ import { useMemo, useState, useCallback } from "react";
 
 /* ---------- Reusable styles (outside component) ---------- */
 const inputStyle =
-  "w-full px-4 py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all duration-300 text-gray-700 placeholder-gray-400";
+  "w-full min-w-0 appearance-none px-4 py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all duration-300 text-gray-700 placeholder-gray-400";
 
 const btnPrimary =
   "w-full py-3 px-6 bg-gradient-to-r from-blue-700 to-blue-900 text-white font-semibold rounded-xl hover:shadow-lg hover:from-blue-800 hover:to-blue-950 transition-all duration-300 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed";
