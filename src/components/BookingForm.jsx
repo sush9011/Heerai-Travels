@@ -228,18 +228,50 @@ export default function BookingForm() {
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input
-                type="date"
-                value={form.date}
-                onChange={(e) => setField("date", e.target.value)}
-                className={inputStyle}
-              />
-              <input
-                type="time"
-                value={form.time}
-                onChange={(e) => setField("time", e.target.value)}
-                className={inputStyle}
-              />
+              <div className="relative">
+                <div className="absolute left-4 top-1/2 -translate-y-[45%] text-gray-400 pointer-events-none">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <input
+                  type={form.date ? "date" : "text"}
+                  onFocus={(e) => {
+                    e.target.type = "date";
+                    try { e.target.showPicker && e.target.showPicker(); } catch (err) {}
+                  }}
+                  onBlur={(e) => {
+                    if (!e.target.value) e.target.type = "text";
+                  }}
+                  value={form.date}
+                  onChange={(e) => setField("date", e.target.value)}
+                  placeholder="Select Date"
+                  className={inputStyle}
+                  style={{ paddingLeft: "2.8rem" }}
+                />
+              </div>
+              <div className="relative">
+                <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <input
+                  type={form.time ? "time" : "text"}
+                  onFocus={(e) => {
+                    e.target.type = "time";
+                    try { e.target.showPicker && e.target.showPicker(); } catch (err) {}
+                  }}
+                  onBlur={(e) => {
+                    if (!e.target.value) e.target.type = "text";
+                  }}
+                  value={form.time}
+                  onChange={(e) => setField("time", e.target.value)}
+                  placeholder="Select Time"
+                  className={inputStyle}
+                  style={{ paddingLeft: "2.8rem" }}
+                />
+              </div>
             </div>
           </div>
 
