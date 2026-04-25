@@ -11,6 +11,7 @@ import AdminPanel from "./Pages/Admin-Panel";
 import FleetDetails from "./Pages/Fleet-Details";
 
 import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function Home() {
   return (
@@ -28,6 +29,10 @@ import Contact from "./Pages/Contact";
 function App() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div>
