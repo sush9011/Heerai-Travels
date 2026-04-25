@@ -1,4 +1,5 @@
 import { MapPin, ArrowRight, Compass, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Routes() {
   const routes = [
@@ -96,9 +97,9 @@ export default function Routes() {
                   <p className="text-2xl font-black text-gray-900">{r.price}</p>
                 </div>
                 
-                <button className="bg-gray-50 hover:bg-blue-600 text-blue-700 hover:text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 border border-gray-200 hover:border-blue-600 active:scale-95 shadow-sm">
+                <Link to={`/book?pickup=${encodeURIComponent(r.from)}&drop=${encodeURIComponent(r.to)}`} className="bg-gray-50 hover:bg-blue-600 text-blue-700 hover:text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 border border-gray-200 hover:border-blue-600 active:scale-95 shadow-sm inline-block text-center">
                   Book Now
-                </button>
+                </Link>
               </div>
 
             </div>

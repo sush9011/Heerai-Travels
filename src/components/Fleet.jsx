@@ -1,4 +1,5 @@
 import { Users, Briefcase, Wind, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Fleet() {
   const cars = [
@@ -109,9 +110,9 @@ export default function Fleet() {
                 </div>
 
                 {/* Button */}
-                <button className="w-full bg-gray-50 hover:bg-blue-600 text-blue-700 hover:text-white border border-gray-200 hover:border-blue-600 font-semibold py-3.5 rounded-xl transition-all duration-300 shadow-sm active:scale-[0.98]">
+                <Link to={`/book?car=${encodeURIComponent(car.name)}`} className="w-full block text-center bg-gray-50 hover:bg-blue-600 text-blue-700 hover:text-white border border-gray-200 hover:border-blue-600 font-semibold py-3.5 rounded-xl transition-all duration-300 shadow-sm active:scale-[0.98]">
                   Book {car.name}
-                </button>
+                </Link>
               </div>
             </div>
           ))}

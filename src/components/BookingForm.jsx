@@ -1,4 +1,5 @@
-import { useMemo, useState, useCallback } from "react";
+import { useMemo, useState, useCallback, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 /* ---------- Reusable styles (outside component) ---------- */
 const inputStyle =
@@ -83,13 +84,14 @@ function CarCard({ option, active, onSelect }) {
 
 /* ---------- Main component ---------- */
 export default function BookingForm() {
+  const [searchParams] = useSearchParams();
+  
   const [step, setStep] = useState(1);
 
-  // single state object → fewer setters, cleaner updates
   const [form, setForm] = useState({
-    tripType: "One Way",
-    pickup: "",
-    drop: "",
+    tripType: searchParams.get("tripType") || "One Way",
+    pickup: searchParams.get("pickup") || "",
+    drop: searchParams.get("drop") || "",
     date: "",
     time: "",
     name: "",
@@ -97,7 +99,7 @@ export default function BookingForm() {
     email: "",
     persons: "",
     address: "",
-    car: "",
+    car: searchParams.get("car") || "",
   });
 
   const setField = useCallback((key, value) => {

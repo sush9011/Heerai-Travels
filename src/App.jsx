@@ -9,6 +9,7 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import AdminPanel from "./Pages/Admin-Panel";
 import FleetDetails from "./Pages/Fleet-Details";
+import Book from "./Pages/Book";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -45,6 +46,7 @@ function App() {
         <Route path="/fleet" element={<FleetDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/book" element={<Book />} />
         <Route path="/admin" element={<AdminPanel />} />
       </Routes>
 
